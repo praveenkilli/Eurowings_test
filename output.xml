@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on darwin)" generated="20230401 18:36:22.767" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="/Users/praveenkilli/PycharmProjects/test_eu/tests">
+<suite id="s1-s1" name="1 Flightsearch" source="/Users/praveenkilli/PycharmProjects/test_eu/tests/1_flightsearch.robot">
+<test id="s1-s1-t1" name="Search flight" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${EurowingsURL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230401 18:36:22.873" level="INFO">Opening browser 'Chrome' to base url 'https://www.eurowings.com/en.html'.</msg>
+<status status="PASS" starttime="20230401 18:36:22.872" endtime="20230401 18:36:42.638"/>
+</kw>
+<kw name="Accept privacy settings" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${privacy}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:36:42.640" endtime="20230401 18:36:42.851"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${privacy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:36:42.851" level="INFO">Clicking element '//span[contains(text(),'I understand')]'.</msg>
+<status status="PASS" starttime="20230401 18:36:42.851" endtime="20230401 18:36:43.213"/>
+</kw>
+<status status="PASS" starttime="20230401 18:36:42.639" endtime="20230401 18:36:43.213"/>
+</kw>
+<kw name="Select Departure airport" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${departure_field_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:36:43.213" endtime="20230401 18:36:43.290"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${departure_field_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:36:43.290" level="INFO">Clicking element '//*[@id="section-tabflight"]/div/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20230401 18:36:43.290" endtime="20230401 18:36:44.282"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${departure_input_field}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:36:44.282" endtime="20230401 18:36:44.408"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${departure_input_field}</arg>
+<arg>cologne-bonn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230401 18:36:44.408" level="INFO">Typing text 'cologne-bonn' into text field '//*[@id="station-select-91-input"]'.</msg>
+<status status="PASS" starttime="20230401 18:36:44.408" endtime="20230401 18:36:45.431"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230401 18:36:45.431" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230401 18:36:45.432" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230401 18:36:45.432" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230401 18:36:45.431" endtime="20230401 18:36:46.027"/>
+</kw>
+<status status="PASS" starttime="20230401 18:36:43.213" endtime="20230401 18:36:46.027"/>
+</kw>
+<kw name="Select destination airport" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${destination_input_field}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:36:46.027" endtime="20230401 18:36:46.222"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${destination_input_field}</arg>
+<arg>berlin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230401 18:36:46.222" level="INFO">Typing text 'berlin' into text field '//*[@id="station-select-92-input"]'.</msg>
+<status status="PASS" starttime="20230401 18:36:46.222" endtime="20230401 18:36:46.907"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230401 18:36:46.907" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230401 18:36:46.907" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230401 18:36:46.907" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230401 18:36:46.907" endtime="20230401 18:36:47.058"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230401 18:36:52.061" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230401 18:36:47.058" endtime="20230401 18:36:52.062"/>
+</kw>
+<status status="PASS" starttime="20230401 18:36:46.027" endtime="20230401 18:36:52.062"/>
+</kw>
+<kw name="Select outgoing date" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${outgoing_date}</arg>
+<arg>${outgoingdates.date1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230401 18:36:52.068" level="INFO">Typing text '18/04/23' into text field '//*[@id="datepicker-93-input"]'.</msg>
+<status status="PASS" starttime="20230401 18:36:52.064" endtime="20230401 18:36:52.277"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230401 18:36:52.277" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230401 18:36:52.277" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230401 18:36:52.277" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230401 18:36:52.277" endtime="20230401 18:36:52.382"/>
+</kw>
+<status status="PASS" starttime="20230401 18:36:52.063" endtime="20230401 18:36:52.382"/>
+</kw>
+<kw name="Select return date" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${return_date_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:36:52.382" endtime="20230401 18:36:52.394"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${return_date_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:36:52.394" level="INFO">Clicking element '//*[@id="section-tabflight"]/div/div/div/div/div[4]/div/div/button'.</msg>
+<status status="PASS" starttime="20230401 18:36:52.394" endtime="20230401 18:36:52.643"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${return_date_input_field}</arg>
+<arg>${returndates.date2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230401 18:36:52.644" level="INFO">Typing text '19/04/23' into text field '//*[@id="datepicker-94-input"]'.</msg>
+<status status="PASS" starttime="20230401 18:36:52.643" endtime="20230401 18:36:52.749"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230401 18:36:57.751" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230401 18:36:52.749" endtime="20230401 18:36:57.752"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230401 18:36:57.754" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230401 18:36:57.754" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230401 18:36:57.754" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230401 18:36:57.752" endtime="20230401 18:36:57.822"/>
+</kw>
+<status status="PASS" starttime="20230401 18:36:52.382" endtime="20230401 18:36:57.822"/>
+</kw>
+<kw name="Search for flight" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Search_flight}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:36:57.822" level="INFO">Clicking element '//*[@id="section-tabflight"]/div/div/div/div/div[6]/button'.</msg>
+<status status="PASS" starttime="20230401 18:36:57.822" endtime="20230401 18:37:01.573"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230401 18:37:11.574" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230401 18:37:01.573" endtime="20230401 18:37:11.574"/>
+</kw>
+<status status="PASS" starttime="20230401 18:36:57.822" endtime="20230401 18:37:11.574"/>
+</kw>
+<status status="PASS" starttime="20230401 18:36:22.872" endtime="20230401 18:37:11.574"/>
+</test>
+<status status="PASS" starttime="20230401 18:36:22.777" endtime="20230401 18:37:11.575"/>
+</suite>
+<suite id="s1-s2" name="2 Flightstatus" source="/Users/praveenkilli/PycharmProjects/test_eu/tests/2_flightstatus.robot">
+<test id="s1-s2-t1" name="Flight Status" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Eurowings_flightstatusURL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230401 18:37:11.580" level="INFO">Opening browser 'Chrome' to base url 'https://www.eurowings.com/en/information/at-the-airport/flight-status.html'.</msg>
+<status status="PASS" starttime="20230401 18:37:11.580" endtime="20230401 18:37:28.980"/>
+</kw>
+<kw name="Accept privacy settings" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${privacy}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:37:28.984" endtime="20230401 18:37:29.177"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${privacy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:37:29.178" level="INFO">Clicking element '//span[contains(text(),'I understand')]'.</msg>
+<status status="PASS" starttime="20230401 18:37:29.177" endtime="20230401 18:37:29.475"/>
+</kw>
+<status status="PASS" starttime="20230401 18:37:28.983" endtime="20230401 18:37:29.475"/>
+</kw>
+<kw name="Flight status departure airport" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${flightstatus_departureairport}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:37:29.475" endtime="20230401 18:37:29.573"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${flightstatus_departureairport}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:37:29.574" level="INFO">Clicking element '//*[@id="site"]/main/div[3]/div[3]/div/div[1]/div/div[2]/div[1]/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20230401 18:37:29.573" endtime="20230401 18:37:30.424"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230401 18:37:33.426" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230401 18:37:30.424" endtime="20230401 18:37:33.426"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${flightstatus_depatureinput}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:37:33.427" endtime="20230401 18:37:33.484"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${flightstatus_depatureinput}</arg>
+<arg>cologne-bonn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230401 18:37:33.485" level="INFO">Typing text 'cologne-bonn' into text field '//*[@id="station-select-198-input"]'.</msg>
+<status status="PASS" starttime="20230401 18:37:33.484" endtime="20230401 18:37:34.452"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230401 18:37:34.458" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230401 18:37:34.459" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230401 18:37:34.459" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230401 18:37:34.452" endtime="20230401 18:37:34.613"/>
+</kw>
+<status status="PASS" starttime="20230401 18:37:29.475" endtime="20230401 18:37:34.614"/>
+</kw>
+<kw name="Flight status destination airport" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${flightstatus_destinationairport}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:37:34.614" endtime="20230401 18:37:34.622"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${flightstatus_destinationairport}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:37:34.623" level="INFO">Clicking element '//*[@id="site"]/main/div[3]/div[3]/div/div[1]/div/div[2]/div[1]/div/div/div[2]/div/div/button'.</msg>
+<status status="PASS" starttime="20230401 18:37:34.622" endtime="20230401 18:37:35.186"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230401 18:37:38.189" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230401 18:37:35.187" endtime="20230401 18:37:38.189"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${flightstatus_destinationinput}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:37:38.189" endtime="20230401 18:37:38.202"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${flightstatus_destinationinput}</arg>
+<arg>berlin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230401 18:37:38.203" level="INFO">Typing text 'berlin' into text field '//*[@id="station-select-199-input"]'.</msg>
+<status status="PASS" starttime="20230401 18:37:38.202" endtime="20230401 18:37:38.415"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230401 18:37:41.418" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230401 18:37:38.415" endtime="20230401 18:37:41.418"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230401 18:37:41.421" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230401 18:37:41.422" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230401 18:37:41.422" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230401 18:37:41.419" endtime="20230401 18:37:41.512"/>
+</kw>
+<status status="PASS" starttime="20230401 18:37:34.614" endtime="20230401 18:37:41.512"/>
+</kw>
+<kw name="Flight status date" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${flightstatus_depaturedate}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:37:41.512" endtime="20230401 18:37:41.528"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${flightstatus_depaturedate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:37:41.529" level="INFO">Clicking element '//*[@id="site"]/main/div[3]/div[3]/div/div[1]/div/div[2]/div[1]/form/div[1]/div/div[1]'.</msg>
+<status status="PASS" starttime="20230401 18:37:41.528" endtime="20230401 18:37:41.960"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230401 18:37:41.961" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230401 18:37:41.961" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230401 18:37:41.961" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230401 18:37:41.960" endtime="20230401 18:37:41.993"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230401 18:37:44.995" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230401 18:37:41.993" endtime="20230401 18:37:44.995"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${flightstatus_depaturedateinput}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:37:44.996" endtime="20230401 18:37:45.021"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${flightstatus_depaturedateinput}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:37:45.021" level="INFO">Clicking element '//*[@id="datepicker_calendar_27"]/div/div/div/ul/li/div/table/tbody/tr[1]/td[7]'.</msg>
+<status status="PASS" starttime="20230401 18:37:45.021" endtime="20230401 18:37:45.367"/>
+</kw>
+<status status="PASS" starttime="20230401 18:37:41.512" endtime="20230401 18:37:45.367"/>
+</kw>
+<kw name="Show flight status" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${flightstatus}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230401 18:37:45.367" endtime="20230401 18:37:45.375"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${flightstatus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230401 18:37:45.375" level="INFO">Clicking element '//*[@id="site"]/main/div[3]/div[3]/div/div[1]/div/div[2]/div[1]/form/div[2]/button'.</msg>
+<status status="PASS" starttime="20230401 18:37:45.375" endtime="20230401 18:37:45.477"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230401 18:37:55.479" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230401 18:37:45.478" endtime="20230401 18:37:55.479"/>
+</kw>
+<status status="PASS" starttime="20230401 18:37:45.367" endtime="20230401 18:37:55.480"/>
+</kw>
+<kw name="Verify date is visable" library="resources">
+<kw name="Set Variable" library="BuiltIn">
+<var>${statusdate}</var>
+<arg>//*[@id="site"]/main/div[3]/div[3]/div/div[2]/div/div[2]/nav/ul/li[6]/button/div</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230401 18:37:55.483" level="INFO">${statusdate} = //*[@id="site"]/main/div[3]/div[3]/div/div[2]/div/div[2]/nav/ul/li[6]/button/div</msg>
+<status status="PASS" starttime="20230401 18:37:55.482" endtime="20230401 18:37:55.483"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${statusdate}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230401 18:37:55.531" level="INFO">Element '//*[@id="site"]/main/div[3]/div[3]/div/div[2]/div/div[2]/nav/ul/li[6]/button/div' is displayed.</msg>
+<status status="PASS" starttime="20230401 18:37:55.483" endtime="20230401 18:37:55.531"/>
+</kw>
+<status status="PASS" starttime="20230401 18:37:55.481" endtime="20230401 18:37:55.531"/>
+</kw>
+<status status="PASS" starttime="20230401 18:37:11.580" endtime="20230401 18:37:55.532"/>
+</test>
+<status status="PASS" starttime="20230401 18:37:11.575" endtime="20230401 18:37:55.532"/>
+</suite>
+<status status="PASS" starttime="20230401 18:36:22.768" endtime="20230401 18:37:55.533"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="1 Flightsearch">Tests.1 Flightsearch</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="2 Flightstatus">Tests.2 Flightstatus</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
